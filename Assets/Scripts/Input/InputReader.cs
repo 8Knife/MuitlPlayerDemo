@@ -13,6 +13,8 @@ public class InputReader : ScriptableObject,InputActions.IPlayerActions
     public event Action<Vector2> MoveEvent;
     public event Action<bool> FireEvent;
 
+    public Vector2 MousePosition { get; private set;}
+
     private void OnEnable()
     {
         if (_inputActions == null)
@@ -45,5 +47,10 @@ public class InputReader : ScriptableObject,InputActions.IPlayerActions
         
         if(context.canceled)
             FireEvent?.Invoke(false);
+    }
+
+    public void OnAiming(InputAction.CallbackContext context)
+    {
+        MousePosition = context.ReadValue<Vector2>();
     }
 }

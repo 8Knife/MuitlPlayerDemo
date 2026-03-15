@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627057429105791439}
   - component: {fileID: 4396790872720440126}
-  - component: {fileID: 4074677878204209500}
+  - component: {fileID: 1261940460391238996}
   m_Layer: 0
   m_Name: Tank Treads
   m_TagString: Untagged
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4074677878204209500
+--- !u!114 &1261940460391238996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 203089551200960995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 144a425fdad843d1b4e7b45b1382f2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8296614730069898434}
-  - component: {fileID: 8150897662911631437}
+  - component: {fileID: 2269925523137563797}
   m_Layer: 0
   m_Name: Turret Pivot
   m_TagString: Untagged
@@ -234,7 +234,7 @@ Transform:
   m_Father: {fileID: 6792447085913277345}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8150897662911631437
+--- !u!114 &2269925523137563797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3709867021330901422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 144a425fdad843d1b4e7b45b1382f2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -358,8 +358,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6792447085913277345}
+  - component: {fileID: 7670933451083955813}
   - component: {fileID: 4419196669132062809}
-  - component: {fileID: 7608427494938461759}
+  - component: {fileID: 7380040088260209082}
+  - component: {fileID: 2180497734472185046}
+  - component: {fileID: 872504670073170493}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -384,6 +387,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &7670933451083955813
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501351908085439593}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!114 &4419196669132062809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +429,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &7608427494938461759
+--- !u!114 &7380040088260209082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,7 +438,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6501351908085439593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 144a425fdad843d1b4e7b45b1382f2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -436,3 +460,34 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &2180497734472185046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501351908085439593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26b3ff26a7d498c9e82e5c600307f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: 816a0ee112aeb9745b523c5ecca963c1, type: 2}
+  playerTransform: {fileID: 627057429105791439}
+  playerRigidbody2D: {fileID: 7670933451083955813}
+  moveSpeed: 4
+  turnRotate: 180
+--- !u!114 &872504670073170493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501351908085439593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb4d939b3014644bd4a575045d251f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 8296614730069898434}
+  inputReader: {fileID: 11400000, guid: 816a0ee112aeb9745b523c5ecca963c1, type: 2}
