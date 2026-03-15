@@ -1,9 +1,10 @@
 ﻿using System;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Cores
 {
-    public class PlayerAiming : MonoBehaviour
+    public class PlayerAiming : NetworkBehaviour
     {
         [Header("References")]
         [SerializeField] private Transform playerTransform;
